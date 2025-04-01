@@ -23,6 +23,9 @@ case "$command" in
     mongo up --detach
     go run "${ProjectRoot}/cmd/ambulance-api-service"
     ;;
+  test)   
+     go test -v ./...
+    ;;
   mongo)
     mongo up
     ;;
