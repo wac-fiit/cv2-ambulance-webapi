@@ -24,6 +24,10 @@ spec:
         volumeMounts:
         - name: init-scripts
           mountPath: /scripts
+        envFrom:
+          - configMapRef:
+              name: otel-params
+              optional: true
         env:
           - name: AMBULANCE_API_PORT
             value: "8080"
